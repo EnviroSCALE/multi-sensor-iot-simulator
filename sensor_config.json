@@ -1,0 +1,54 @@
+{
+  "sensors":
+  [
+    { "name": "dust",
+      "readlatency": 0,
+      "period": 8.0,
+      "size": 12,
+      "weight": 0.33,
+      "gamma": 1,
+      "datafile": "data_dust_taiwan.csv"
+    },
+    { "name" : "ch4",
+      "readlatency": 0,
+      "period": 20.0,
+      "size": 8,
+      "weight" : 0.33,
+      "gamma": 1,
+      "datafile": "data_temp_taiwan.csv"
+    },
+    { "name" : "temp",
+      "readlatency": 0,
+      "period": 4.0,
+      "size": 8,
+      "weight" : 0.33,
+      "gamma": 1,
+      "datafile": "data_humidity_taiwan.csv"
+    }
+  ],
+  "params":{
+     "alpha" : 800,
+     "beta" : 1,
+     "lambda" : 0.005,
+     "M": 36000,
+     "D": 100000,
+     "max_rate":512,
+     "min_period": 0.1
+  },
+   "update_interval":{
+	"period" : 10,
+	"rate" : 100	
+   },
+   "upload":{
+	   "period": 50,
+	   "bw": 100, 
+	   "up_time": 3600, 
+	   "down_time": 100	   
+   },
+  "seed" :150,
+  "choice": 5,
+  "filename": "5-uperiod50.csv",
+  "sf": 0.8,
+  "is_update": true,
+  "overhead": 1  
+}
